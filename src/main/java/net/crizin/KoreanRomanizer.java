@@ -3,8 +3,8 @@ package net.crizin;
 public class KoreanRomanizer {
 	private boolean capitalizeOnFirstLetter = true;
 	private boolean useHyphenWhenVowelConfused = true;
-	private static String[] chosungs = { "g", "kk", "n", "d", "tt", "r", "m", "b", "pp", "s", "ss", "", "j", "jj", "ch", "k", "t", "p", "h" };
-	private static String[] jungsungs = { "a", "ae", "ya", "yae", "eo", "e", "yeo", "ye", "o", "wa", "wae", "oe", "yo", "u", "wo", "we", "wi", "yu", "eu", "ui", "i" };
+	private static String[] chosungs = {"g", "kk", "n", "d", "tt", "r", "m", "b", "pp", "s", "ss", "", "j", "jj", "ch", "k", "t", "p", "h"};
+	private static String[] jungsungs = {"a", "ae", "ya", "yae", "eo", "e", "yeo", "ye", "o", "wa", "wae", "oe", "yo", "u", "wo", "we", "wi", "yu", "eu", "ui", "i"};
 
 	public static final int CHOSUNG_ㄱ = 0;
 	public static final int CHOSUNG_ㄲ = 1;
@@ -87,7 +87,7 @@ public class KoreanRomanizer {
 
 	public String romanize(String string) throws NullPointerException {
 		if (string == null) {
-			throw new NullPointerException();
+			throw new NullPointerException("String should not be null.");
 		}
 
 		int length = string.length();

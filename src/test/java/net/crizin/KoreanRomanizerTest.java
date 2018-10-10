@@ -1,21 +1,23 @@
 package net.crizin;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class KoreanRomanizerTest {
 	private KoreanRomanizer koreanRomanizer;
 
-	@Before
+	@BeforeAll
 	public void setUp() {
 		koreanRomanizer = new KoreanRomanizer();
 	}
 
-	@Test(expected = NullPointerException.class)
+	@Test
 	public void testException() {
-		koreanRomanizer.romanize(null);
+		Throwable exception = assertThrows(NullPointerException.class, () -> koreanRomanizer.romanize(null));
+		assertEquals("String should not be null.", exception.getMessage());
 	}
 
 	@Test
