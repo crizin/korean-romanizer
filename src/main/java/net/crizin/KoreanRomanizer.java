@@ -1,5 +1,10 @@
 package net.crizin;
 
+/**
+ * A Java library that converts Korean into Roman characters.
+ * It is implemented based on the National Korean Language Romanization and can be covered a lot,
+ * but it is not perfect because it is difficult to implement 100% if there is no word dictionary data due to the nature of Korean.
+ */
 public class KoreanRomanizer {
 	private boolean capitalizeOnFirstLetter = true;
 	private boolean useHyphenWhenVowelConfused = true;
@@ -77,14 +82,33 @@ public class KoreanRomanizer {
 	public static final int JONGSUNG_ㅍ = 26;
 	public static final int JONGSUNG_ㅎ = 27;
 
+	/**
+	 * If set to true, prints the first letter of each word separated by white space
+	 * (default: true)
+	 *
+	 * @param capitalizeOnFirstLetter
+	 */
 	public void setCapitalizeOnFirstLetter(boolean capitalizeOnFirstLetter) {
 		this.capitalizeOnFirstLetter = capitalizeOnFirstLetter;
 	}
 
+	/**
+	 * If set to true, hyphens will be printed where there is a pronounced confusion
+	 * (default: true)
+	 *
+	 * @param useHyphenWhenVowelConfused
+	 */
 	public void setUseHyphenWhenVowelConfused(boolean useHyphenWhenVowelConfused) {
 		this.useHyphenWhenVowelConfused = useHyphenWhenVowelConfused;
 	}
 
+	/**
+	 * Convert the Korean area of input string to Roman characters and return it
+	 *
+	 * @param string
+	 * @return Romanized string
+	 * @throws NullPointerException
+	 */
 	public String romanize(String string) throws NullPointerException {
 		if (string == null) {
 			throw new NullPointerException("String should not be null.");

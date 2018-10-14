@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/crizin/korean-romanizer.svg?branch=master)](https://travis-ci.org/crizin/korean-romanizer)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/72ed8965fd6e4e9c8faa9a0b3090a045)](https://www.codacy.com/app/crizin/korean-romanizer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=crizin/korean-romanizer&amp;utm_campaign=Badge_Grade)
 
 # 소개
 
@@ -31,6 +32,7 @@ http://unply.com/@/koreanRomanizer/
 패치 노트
 ====
 1.0.1 모음이 연속되어 발음이 혼란스러운 모든 경우에 하이픈이 추가되도록 수정
+1.0.2 Javadoc 추가
 
 라이선스
 ====
