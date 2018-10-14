@@ -8,6 +8,16 @@
 한국어를 입력하면 로마자로 변환해주는 Java 라이브러리. 국립국어원 로마자 표기법을 기반으로 구현되었고 많은 부분이 커버 가능하지만
 한국어의 특성상 단어별 사전 데이터가 존재하지 않으면 100% 구현이 어렵기 때문에 완벽하지는 않다.
 
+## Maven
+
+```xml
+  <dependency>
+    <groupId>net.crizin</groupId>
+    <artifactId>korean-romanizer</artifactId>
+    <version>1.0.2</version>
+  </dependency>
+```
+
 ## 온라인 데모
 
 [Online Demo](http://unply.com/@/koreanRomanizer/)
