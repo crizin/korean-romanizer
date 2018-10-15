@@ -28,17 +28,17 @@
   <tr>
     <td>void</td>
     <td>setCapitalizeOnFirstLetter(boolean capitalizeOnFirstLetter)</td>
-    <td>true로 설정하면 공백으로 구분된 각 단어의 첫 글자를 대문자로 출력한다 (기본값: true)
+    <td>true로 설정하면 공백으로 구분된 각 단어의 첫 글자를 대문자로 출력한다 (기본값: true)</td>
   </tr>
   <tr>
-    <td>void
-    <td>setUseHyphenWhenVowelConfused(boolean useHyphenWhenVowelConfused)
-    <td>true로 설정하면 발음상 혼동의 우려가 있는 부분에 하이픈을 출력해준다 (기본값: true)
+    <td>void</td>
+    <td>setUseHyphenWhenVowelConfused(boolean useHyphenWhenVowelConfused)</td>
+    <td>true로 설정하면 발음상 혼동의 우려가 있는 부분에 하이픈을 출력해준다 (기본값: true)</td>
   </tr>
   <tr>
-    <td>String
-    <td>romanize(String string)
-    <td>입력받은 문자열 중 한글 영역을 로마자로 변환해 리턴한다
+    <td>String</td>
+    <td>romanize(String string)</td>
+    <td>입력받은 문자열 중 한글 영역을 로마자로 변환해 리턴한다</td>
   </tr>
 </table>
 
