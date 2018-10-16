@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/crizin/korean-romanizer.svg?branch=master)](https://travis-ci.org/crizin/korean-romanizer)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/72ed8965fd6e4e9c8faa9a0b3090a045)](https://www.codacy.com/app/crizin/korean-romanizer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=crizin/korean-romanizer&amp;utm_campaign=Badge_Grade)
-[![Apache License 2.0](https://img.shields.io/badge/license-Apache_2-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 # Korean Romanizer
 
@@ -50,4 +50,4 @@
 
 ## 라이선스
 
-[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+[MIT license](https://opensource.org/licenses/MIT)

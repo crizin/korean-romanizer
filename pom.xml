@@ -2,14 +2,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.crizin</groupId>
 	<artifactId>korean-romanizer</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<name>Korean Romanizer</name>
 	<description>A simple library that converts Korean into Roman characters.</description>
 	<url>https://github.com/crizin/korean-romanizer</url>
 	<licenses>
 		<license>
-			<name>The Apache Software License, Version 2.0</name>
-			<url>https://opensource.org/licenses/Apache-2.0</url>
+			<name>MIT License</name>
+			<url>https://opensource.org/licenses/MIT</url>
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
