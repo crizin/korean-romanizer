@@ -15,7 +15,7 @@
   <dependency>
     <groupId>net.crizin</groupId>
     <artifactId>korean-romanizer</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
   </dependency>
 ```
 
@@ -42,11 +42,6 @@
     <td>입력받은 문자열 중 한글 영역을 로마자로 변환해 리턴한다</td>
   </tr>
 </table>
-
-## 패치 노트
-
-* 1.0.1 모음이 연속되어 발음이 혼란스러운 모든 경우에 하이픈이 추가되도록 수정
-* 1.0.2 Javadoc 추가
 
 ## 라이선스
 
