@@ -851,6 +851,8 @@ public class KoreanCharacter implements Serializable, Comparable<KoreanCharacter
 	 * 		the vowel used as the middle syllable of Hangul.
 	 * @param jongsung
 	 * 		the consonant used as the final syllable of Hangul.
+	 * 	
+	 * @throws NullPointerException if any arguments is null.
 	 */
 	public KoreanCharacter(Chosung chosung, Jungsung jungsung, Jongsung jongsung) {
 		if (chosung == null || jungsung == null || jongsung == null) {
