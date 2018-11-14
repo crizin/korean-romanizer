@@ -123,11 +123,11 @@ public class KoreanRomanizer {
 	}
 
 	/**
-	 * The {@code main} method to convert input from the {@code stdin} on command line.
+	 * The {@code main} method to convert string from the standard input.
 	 *
 	 * @param args
-	 * 		first argument is Type value,
-	 * 		second argument is ConsonantAssimilation value
+	 * 		first argument is {@link KoreanCharacter.Type} value,
+	 * 		second argument is {@link KoreanCharacter.ConsonantAssimilation} value
 	 * 		(Both arguments must be specified or none specified.)
 	 */
 	public static void main(String... args) {
