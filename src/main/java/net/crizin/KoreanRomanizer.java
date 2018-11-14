@@ -5,9 +5,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * <p>A Java library that converts Korean into Roman characters.
+ * A Java library that converts Korean into Roman characters.
  * It is implemented based on the National Korean Language Romanization and can be covered a lot,
- * but it is not perfect because it is difficult to implement 100% if there is no word dictionary data due to the nature of Korean.</p>
+ * but it is not perfect because it is difficult to implement 100% if there is no word dictionary data due to the nature of Korean.
  */
 public class KoreanRomanizer {
 	private static final Pattern doubleSurnames = Pattern.compile("^(\\s*)(강전|남궁|독고|동방|등정|망절|무본|사공|서문|선우|소봉|어금|장곡|제갈|황목|황보)(.{1,10})$");
@@ -20,6 +20,8 @@ public class KoreanRomanizer {
 	}
 
 	/**
+	 * Romanize string.
+	 *
 	 * @param string
 	 * 		the string to convert to roman string.
 	 * @return the romanized string.
@@ -31,6 +33,8 @@ public class KoreanRomanizer {
 	}
 
 	/**
+	 * Romanize string with consonant assimilation option.
+	 *
 	 * @param string
 	 * 		the string to convert to roman string.
 	 * @param consonantAssimilation
@@ -44,6 +48,8 @@ public class KoreanRomanizer {
 	}
 
 	/**
+	 * Romanize string with type option.
+	 *
 	 * @param string
 	 * 		the string to convert to roman string.
 	 * @param type
@@ -57,7 +63,7 @@ public class KoreanRomanizer {
 	}
 
 	/**
-	 * Convert the Korean area of input string to Roman characters and return it
+	 * Romanize string with Consonant assimilation and type option.
 	 *
 	 * @param string
 	 * 		the string to convert.
@@ -117,12 +123,12 @@ public class KoreanRomanizer {
 	}
 
 	/**
-	 * <p>The {@code main} method to convert input from the {@code stdin} on command line.</p>
+	 * The {@code main} method to convert input from the {@code stdin} on command line.
 	 *
 	 * @param args
 	 * 		first argument is Type value,
 	 * 		second argument is ConsonantAssimilation value
-	 * 	    (Both arguments must be specified or none specified.) 	
+	 * 		(Both arguments must be specified or none specified.)
 	 */
 	public static void main(String... args) {
 		Scanner scanner = new Scanner(System.in);

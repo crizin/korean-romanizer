@@ -3,19 +3,19 @@ package net.crizin;
 import java.io.Serializable;
 
 /**
- * <p>A library that handling Hangul characters in syllable units.</p>
+ * A library that handling Hangul characters in syllable units.
  */
 public class KoreanCharacter implements Serializable, Comparable<KoreanCharacter> {
 	/**
-	 * <p>Required for serialization support.</p>
+	 * Required for serialization support.
 	 *
 	 * @see java.io.Serializable
 	 */
 	private static final long serialVersionUID = -2081434254504406150L;
 
 	/**
-	 * <p>When consonant assimilation is ambiguous how it should occur,
-	 * it designates one of progressive assimilation or regressive assimilation.</p>
+	 * When consonant assimilation is ambiguous how it should occur,
+	 * it designates one of progressive assimilation or regressive assimilation.
 	 */
 	public enum ConsonantAssimilation {
 		/**
@@ -30,7 +30,7 @@ public class KoreanCharacter implements Serializable, Comparable<KoreanCharacter
 	}
 
 	/**
-	 * <p>Options for applying special rules depending on the type of word.</p>
+	 * Options for applying special rules depending on the type of word.
 	 */
 	public enum Type {
 		/**
@@ -60,7 +60,7 @@ public class KoreanCharacter implements Serializable, Comparable<KoreanCharacter
 	}
 
 	/**
-	 * <p>The consonant used as the final syllable of Hangul, which is called "Jongsung".</p>
+	 * The consonant used as the final syllable of Hangul, which is called "Jongsung".
 	 */
 	public enum Chosung {
 		ㄱ("g") {
@@ -340,7 +340,7 @@ public class KoreanCharacter implements Serializable, Comparable<KoreanCharacter
 	}
 
 	/**
-	 * <p>The vowel used as the middle syllable of Hangul, which is called "Jungsung".</p>
+	 * The vowel used as the middle syllable of Hangul, which is called "Jungsung".
 	 */
 	public enum Jungsung {
 		ㅏ("a", false),
@@ -406,7 +406,7 @@ public class KoreanCharacter implements Serializable, Comparable<KoreanCharacter
 	}
 
 	/**
-	 * <p>The consonant used as the final syllable of Hangul, which is called "Jongsung".</p>
+	 * The consonant used as the final syllable of Hangul, which is called "Jongsung".
 	 */
 	public enum Jongsung {
 		NONE(""),
@@ -796,37 +796,37 @@ public class KoreanCharacter implements Serializable, Comparable<KoreanCharacter
 	}
 
 	/**
-	 * <p>First character code point in Hangul Syllables in Unicode table ({@code 가}).</p>
+	 * First character code point in Hangul Syllables in Unicode table ({@code 가}).
 	 */
 	public final static int KoreanLowerValue = 0xAC00;
 
 	/**
-	 * <p>Last character code point in Hangul Syllables in Unicode table ({@code 힣}).</p>
+	 * Last character code point in Hangul Syllables in Unicode table ({@code 힣}).
 	 */
 	public final static int KoreanUpperValue = 0xD7A3;
 
 	/**
-	 * <p>The original character from constructor's argument.</p>
+	 * The original character from constructor's argument.
 	 */
 	private final char character;
 
 	/**
-	 * <p>Disassembled initial syllable of Hangul.</p>
+	 * Disassembled initial syllable of Hangul.
 	 */
 	private Chosung chosung;
 
 	/**
-	 * <p>Disassembled middle syllable of Hangul.</p>
+	 * Disassembled middle syllable of Hangul.
 	 */
 	private Jungsung jungsung;
 
 	/**
-	 * <p>Disassembled final syllable of Hangul.</p>
+	 * Disassembled final syllable of Hangul.
 	 */
 	private Jongsung jongsung;
 
 	/**
-	 * <p>Constructor</p>
+	 * Constructor
 	 *
 	 * @param koreanCharacter
 	 * 		the Hangul or other character
@@ -843,7 +843,7 @@ public class KoreanCharacter implements Serializable, Comparable<KoreanCharacter
 	}
 
 	/**
-	 * <p>Constructor with Hangul object with each syllables.</p>
+	 * Constructor with Hangul object with each syllables.
 	 *
 	 * @param chosung
 	 * 		the consonant used as the initial syllable of Hangul.
@@ -865,7 +865,7 @@ public class KoreanCharacter implements Serializable, Comparable<KoreanCharacter
 	}
 
 	/**
-	 * <p>Whether or not the character of this object is Hangul.</p>
+	 * Whether or not the character of this object is Hangul.
 	 *
 	 * @return Whether all syllables exist to complete Hangul character.
 	 */
@@ -935,7 +935,7 @@ public class KoreanCharacter implements Serializable, Comparable<KoreanCharacter
 	}
 
 	/**
-	 * <p>To check if character is in the Hangul Syllable of Unicode table.</p>
+	 * To check if character is in the Hangul Syllable of Unicode table.
 	 *
 	 * @param character
 	 * 		the character to check.
@@ -946,7 +946,7 @@ public class KoreanCharacter implements Serializable, Comparable<KoreanCharacter
 	}
 
 	/**
-	 * <p>Compares this object to another in ascending order.</p>
+	 * Compares this object to another in ascending order.
 	 *
 	 * @param other
 	 * 		the other object to compare to.
@@ -958,7 +958,7 @@ public class KoreanCharacter implements Serializable, Comparable<KoreanCharacter
 	}
 
 	/**
-	 * <p>Compares this object to another to test if they are equal.</p>
+	 * Compares this object to another to test if they are equal.
 	 *
 	 * @param other
 	 * 		the other object to compare to.
@@ -978,7 +978,7 @@ public class KoreanCharacter implements Serializable, Comparable<KoreanCharacter
 	}
 
 	/**
-	 * <p>Return the hash code for this character.</p>
+	 * Return the hash code for this character.
 	 *
 	 * @return the value of {@link Character#hashCode()}
 	 */
