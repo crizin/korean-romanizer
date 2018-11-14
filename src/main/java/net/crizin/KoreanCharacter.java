@@ -990,7 +990,7 @@ public class KoreanCharacter implements Serializable, Comparable<KoreanCharacter
 	}
 
 	/**
-	 * Returns a {@code String} object representing this {@code Character}'s value.
+	 * Returns a {@link String} object representing this character's value.
 	 *
 	 * @return a string representation of this object.
 	 */
