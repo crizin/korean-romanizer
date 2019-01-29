@@ -7,8 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 public class KoreanRomanizerTest {
 	@Test
 	public void testKoreanCharacter() {
-		System.out.println(new KoreanCharacter('신').getRomanizedString(null, new KoreanCharacter('라'), KoreanCharacter.ConsonantAssimilation.Progressive, KoreanCharacter.Type.Typical));
-
 		KoreanCharacter c = new KoreanCharacter(' ');
 		assertNull(c.getChosung());
 		assertNull(c.getJungsung());
