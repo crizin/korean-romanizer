@@ -54,6 +54,11 @@ public class KoreanCharacter implements Serializable, Comparable<KoreanCharacter
 		Name,
 
 		/**
+		 * Person's full name following the most commonly used notation.
+		 */
+		NameTypical,
+
+		/**
 		 * Common words.
 		 */
 		Typical
@@ -926,7 +931,7 @@ public class KoreanCharacter implements Serializable, Comparable<KoreanCharacter
 			return toString();
 		}
 
-		if (type == Type.Name) {
+		if (type == Type.Name || type == Type.NameTypical) {
 			prevCharacter = null;
 			nextCharacter = null;
 		}

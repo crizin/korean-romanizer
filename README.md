@@ -96,8 +96,20 @@ KoreanRomanizer.romanize("효자로73번길", KoreanCharacter.Type.District)
 KoreanRomanizer.romanize("제갈공명")
 // => Jegalgongmyeong
 
-KoreanRomanizer.romanize("제갈공명", KoreanCharacter.Type.Typical)
+KoreanRomanizer.romanize("제갈공명", KoreanCharacter.Type.Name)
 // => Jegal Gongmyeong
+```
+
+##### `Type.NameTypical`
+
+`Type.Name`과 같지만 흔히 사용하는 성씨 표기법을 따르는 옵션
+
+```java
+KoreanRomanizer.romanize("박보검", KoreanCharacter.Type.Name)
+// => Bak Bogeom
+
+KoreanRomanizer.romanize("박보검", KoreanCharacter.Type.NameTypical)
+// => Park Bogeom
 ```
 
 ##### `Type.Typical`

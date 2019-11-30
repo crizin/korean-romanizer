@@ -1,5 +1,7 @@
 package net.crizin;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -14,6 +16,71 @@ public class KoreanRomanizer {
 	private static final Pattern districtPostfixes = Pattern.compile("^(.{1,20}?)(특별자치도|특별자치시|특별시|광역시|대로|구|군|도|동|리|면|시|읍|가|길|로)(\\s*)$");
 	private static final Pattern districtPostfixesWithNumbers1 = Pattern.compile("^(.{0,20}?)(\\d+)(\\s*)(가길|가|번길|로|단지|동)(\\s*)$");
 	private static final Pattern districtPostfixesWithNumbers2 = Pattern.compile("^(.{0,20}?)(대?로)\\s*(\\d+[가번]?)(길)(\\s*)$");
+	private static final Map<String, String> typicalSurenameRules = new HashMap<String, String>() {
+		{
+			put("가", "Ka");
+			put("간", "Kan");
+			put("갈", "Kal");
+			put("감", "Kam");
+			put("강", "Kang");
+			put("강전", "Kangjun");
+			put("견", "Kyun");
+			put("경", "Kyung");
+			put("계", "Kye");
+			put("고", "Ko");
+			put("공", "Kong");
+			put("곽", "Kwak");
+			put("구", "Koo");
+			put("국", "Kook");
+			put("군", "Kun");
+			put("궁", "Koong");
+			put("궉", "Kwok");
+			put("권", "Kwon");
+			put("근", "Keun");
+			put("금", "Keum");
+			put("기", "Ki");
+			put("길", "Kil");
+			put("김", "Kim");
+			put("노", "Noh");
+			put("두", "Doo");
+			put("란", "Lan");
+			put("뢰", "Loi");
+			put("루", "Lu");
+			put("망절", "Mangjul");
+			put("명", "Myung");
+			put("문", "Moon");
+			put("박", "Park");
+			put("변", "Byun");
+			put("부", "Boo");
+			put("선", "Sun");
+			put("선우", "Sunwoo");
+			put("성", "Sung");
+			put("순", "Soon");
+			put("신", "Shin");
+			put("심", "Shim");
+			put("아", "Ah");
+			put("어금", "Eokum");
+			put("오", "Oh");
+			put("우", "Woo");
+			put("운", "Woon");
+			put("유", "Yoo");
+			put("윤", "Yoon");
+			put("이", "Lee");
+			put("임", "Lim");
+			put("정", "Jung");
+			put("조", "Cho");
+			put("주", "Joo");
+			put("준", "June");
+			put("즙", "Chup");
+			put("최", "Choi");
+			put("편", "Pyun");
+			put("평", "Pyung");
+			put("풍", "Poong");
+			put("현", "Hyun");
+			put("형", "Hyung");
+			put("흥", "Hong");
+		}
+	};
 
 	public KoreanRomanizer() {
 		super();
@@ -85,7 +152,8 @@ public class KoreanRomanizer {
 
 		switch (type) {
 			case Name:
-				string = normalizeName(string);
+			case NameTypical:
+				string = normalizeName(string, type);
 				break;
 			case District:
 				string = normalizeDistrict(string);
@@ -160,15 +228,25 @@ public class KoreanRomanizer {
 	/**
 	 * @param string
 	 * 		the name string to normalize.
+	 * @param type
+	 * 	 	the type of word
 	 * @return the normalized name string.
 	 */
-	private static String normalizeName(String string) {
+	private static String normalizeName(String string, KoreanCharacter.Type type) {
 		Matcher matcher = doubleSurnames.matcher(string);
 
-		if (matcher.find()) {
-			return matcher.group(1) + matcher.group(2) + " " + matcher.group(3);
+		if (type == KoreanCharacter.Type.NameTypical) {
+			if (matcher.find()) {
+				return matcher.group(1) + typicalSurenameRules.getOrDefault(matcher.group(2), matcher.group(2)) + " " + matcher.group(3);
+			} else {
+				return typicalSurenameRules.getOrDefault(String.valueOf(string.charAt(0)), String.valueOf(string.charAt(0))) + " " + string.substring(1);
+			}
 		} else {
-			return string.charAt(0) + " " + string.substring(1);
+			if (matcher.find()) {
+				return matcher.group(1) + matcher.group(2) + " " + matcher.group(3);
+			} else {
+				return string.charAt(0) + " " + string.substring(1);
+			}
 		}
 	}
 
