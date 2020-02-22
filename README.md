@@ -34,8 +34,8 @@
 
 자음 동화가 일어나는 부분에서 역행 동화, 순행 동화 모두 가능할 때 어느쪽을 선택할지 지정할 수 있는 옵션.
 
-- `ConsonantAssimilation.Progressive`: 순행 동화
-- `ConsonantAssimilation.Regressive`: 역행 동화
+  - `ConsonantAssimilation.Progressive`: 순행 동화
+  - `ConsonantAssimilation.Regressive`: 역행 동화
 
 ```java
 KoreanRomanizer.romanize("신라면", KoreanCharacter.ConsonantAssimilation.Progressive);
@@ -138,10 +138,10 @@ new KoreanCharacter('신').getRomanizedString(null, new KoreanCharacter('라'), 
 
 #### `KoreanRomanizer.romanize`
 
-- `KoreanRomanizer.romanize(String)`
-- `KoreanRomanizer.romanize(String, ConsonantAssimilation)`
-- `KoreanRomanizer.romanize(String, Type)`
-- `KoreanRomanizer.romanize(String, Type, ConsonantAssimilation)`
+  - `KoreanRomanizer.romanize(String)`
+  - `KoreanRomanizer.romanize(String, ConsonantAssimilation)`
+  - `KoreanRomanizer.romanize(String, Type)`
+  - `KoreanRomanizer.romanize(String, Type, ConsonantAssimilation)`
 
 입력 받은 문자열을 로마자로 변환한다. 변환시 옵션을 추가할 수 있는 Overloading 메소드들도 존재한다.
 
