@@ -1,6 +1,7 @@
 package net.crizin;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * A library that handling Hangul characters in syllable units.
@@ -860,9 +861,9 @@ public class KoreanCharacter implements Serializable, Comparable<KoreanCharacter
 	 * 		if any arguments is null.
 	 */
 	public KoreanCharacter(Chosung chosung, Jungsung jungsung, Jongsung jongsung) {
-		if (chosung == null || jungsung == null || jongsung == null) {
-			throw new NullPointerException("All parameters must not be null.");
-		}
+		Objects.requireNonNull(chosung, "All parameters must not be null.");
+		Objects.requireNonNull(jungsung, "All parameters must not be null.");
+		Objects.requireNonNull(jongsung, "All parameters must not be null.");
 
 		this.chosung = chosung;
 		this.jungsung = jungsung;

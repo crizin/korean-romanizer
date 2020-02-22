@@ -2,6 +2,7 @@ package net.crizin;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -82,10 +83,6 @@ public class KoreanRomanizer {
 		}
 	};
 
-	public KoreanRomanizer() {
-		super();
-	}
-
 	/**
 	 * Romanize string.
 	 *
@@ -143,9 +140,7 @@ public class KoreanRomanizer {
 	 * 		if string parameter is null
 	 */
 	public static String romanize(String string, KoreanCharacter.Type type, KoreanCharacter.ConsonantAssimilation consonantAssimilation) {
-		if (string == null) {
-			throw new NullPointerException("String should not be null.");
-		}
+		Objects.requireNonNull(string, "String should not be null.");
 
 		consonantAssimilation = (consonantAssimilation == null) ? KoreanCharacter.ConsonantAssimilation.Regressive : consonantAssimilation;
 		type = (type == null) ? KoreanCharacter.Type.Typical : type;
@@ -162,7 +157,9 @@ public class KoreanRomanizer {
 
 		StringBuilder buffer = new StringBuilder(string.length() * 3);
 
-		KoreanCharacter prevCharacter, currentCharacter = null, nextCharacter = null;
+		KoreanCharacter prevCharacter;
+		KoreanCharacter currentCharacter = null;
+		KoreanCharacter nextCharacter = null;
 
 		for (int i = 0; i < string.length(); i++) {
 			prevCharacter = currentCharacter;
