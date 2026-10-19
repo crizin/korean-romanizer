@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/crizin/korean-romanizer.svg?branch=master)](https://travis-ci.org/crizin/korean-romanizer)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/72ed8965fd6e4e9c8faa9a0b3090a045)](https://www.codacy.com/app/crizin/korean-romanizer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=crizin/korean-romanizer&amp;utm_campaign=Badge_Grade)
+[![CI](https://github.com/crizin/korean-romanizer/actions/workflows/ci.yml/badge.svg)](https://github.com/crizin/korean-romanizer/actions/workflows/ci.yml)
+[![Maven Central](https://img.shields.io/maven-central/v/net.crizin/korean-romanizer.svg)](https://central.sonatype.com/artifact/net.crizin/korean-romanizer)
 [![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 # Korean Romanizer
@@ -7,7 +7,7 @@
 ## 소개
 
 한국어를 입력하면 로마자로 변환해주는 Java 라이브러리.
-[국립국어원 로마자 표기법](https://www.korean.go.kr/front/page/pageView.do?page_id=P000148&mn_id=99)을 기반으로 구현되었고
+[국립국어원 로마자 표기법](https://korean.go.kr/kornorms/regltn/regltnView.do?regltn_code=0004)을 기반으로 구현되었고
 많은 부분이 커버 가능하지만 한국어의 특성상 단어별 사전 데이터가 존재하지 않으면 100% 구현이 어렵기 때문에 완벽하지는 않다.
 
 ## Maven
@@ -20,9 +20,7 @@
   </dependency>
 ```
 
-## 온라인 데모
-
-[Online Demo](http://unply.com/@/koreanRomanizer/)
+jar 파일은 [Releases](https://github.com/crizin/korean-romanizer/releases)에서 받을 수 있다.
 
 ## 클래스 설명
 

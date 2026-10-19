@@ -24,20 +24,12 @@
 	<scm>
 		<url>https://github.com/crizin/korean-romanizer</url>
 	</scm>
-	<distributionManagement>
-		<repository>
-			<id>korean-romanizer</id>
-			<url>https://api.bintray.com/maven/crizin/maven/korean-romanizer/;publish=1</url>
-		</repository>
-	</distributionManagement>
 	<properties>
 		<java.version>1.8</java.version>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
-		<bintray.repo>crizin/maven</bintray.repo>
-		<bintray.package>korean-romanizer</bintray.package>
 	</properties>
 	<dependencies>
 		<dependency>

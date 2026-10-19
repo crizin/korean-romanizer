@@ -1,0 +1,31 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  jar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: maven
+      - name: Check tag matches pom version
+        run: |
+          version=$(mvn -B -ntp -q help:evaluate -Dexpression=project.version -DforceStdout)
+          if [ "${GITHUB_REF_NAME#v}" != "$version" ]; then
+            echo "::error::Release tag $GITHUB_REF_NAME does not match pom.xml version $version"
+            exit 1
+          fi
+      - run: mvn -B -ntp verify -Dgpg.skip
+      - name: Upload jars to the release
+        run: gh release upload "$GITHUB_REF_NAME" target/korean-romanizer-*.jar --clobber
+        env:
+          GH_TOKEN: ${{ github.token }}
